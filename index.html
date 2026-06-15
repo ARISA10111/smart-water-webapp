@@ -1,178 +1,228 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Water – Reliable Water Delivery in Kenya</title>
- 
+    <title>Smart Water - Reliable Water Delivery in Kenya</title>
+    <meta name="description" content="Smart Water connects homes and businesses with trusted water vendors across Kenya. Fast, reliable, and affordable.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- 
-<!-- ===== NAVIGATION ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">💧 Smart Water</a>
- 
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
- 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="vendors.html">Vendors</a></li>
                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="order.html">Order Water</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-warning text-dark px-3 ms-2 fw-bold" href="order.html">Order Water</a></li>
+                <li class="nav-item"><button id="darkToggle" title="Toggle dark mode">🌙</button></li>
             </ul>
         </div>
     </div>
 </nav>
- 
-<!-- ===== HERO ===== -->
-<section class="hero">
+
+<!-- Hero -->
+<section class="hero text-center">
     <div class="container">
-        <h1>Reliable Water Delivery Across Kenya</h1>
-        <p>Connecting homes and businesses with verified water vendors. Fast, affordable, and trusted.</p>
-        <a href="order.html" class="btn btn-light me-2">Order Now</a>
-        <a href="about.html" class="btn btn-outline-light">Learn More</a>
+        <h1>Reliable Water Delivery Services</h1>
+        <p>Connecting homes and businesses with trusted water vendors across Kenya. Fast delivery. Fair prices. Clean water.</p>
+        <a href="order.html" class="btn btn-primary btn-lg me-2">Order Now</a>
+        <a href="about.html" class="btn btn-outline-primary btn-lg">Learn More</a>
     </div>
 </section>
- 
-<!-- ===== STATS ===== -->
-<section class="container py-5">
-    <div class="row text-center g-3">
-        <div class="col-6 col-md-3">
-            <div class="stat-box">
-                <span class="stat-number">500+</span>
-                <span class="stat-label">Happy Customers</span>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="stat-box">
-                <span class="stat-number">20+</span>
-                <span class="stat-label">Verified Vendors</span>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="stat-box">
-                <span class="stat-number">3</span>
-                <span class="stat-label">Counties Served</span>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="stat-box">
-                <span class="stat-number">24/7</span>
-                <span class="stat-label">Emergency Supply</span>
-            </div>
-        </div>
-    </div>
-</section>
- 
-<!-- ===== WHY CHOOSE US ===== -->
-<section class="bg-blue-light py-5">
+
+<!-- Stats -->
+<section class="stats-section">
     <div class="container">
-        <h2 class="section-title text-center">Why Choose Smart Water?</h2>
-        <p class="section-subtitle text-center">
-            We make finding clean water simple, fast, and reliable.
-        </p>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body text-center p-4">
-                        <span class="service-icon">✅</span>
-                        <h5>Verified Vendors</h5>
-                        <p class="text-muted">Every vendor on our platform is vetted for water quality and reliability before listing.</p>
+        <div class="row text-center">
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-number">500+</div>
+                <div>Happy Customers</div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-number">20+</div>
+                <div>Verified Vendors</div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-number">5</div>
+                <div>Counties Served</div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-number">24/7</div>
+                <div>Emergency Support</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+            <h2 class="fw-bold">Why Choose Smart Water?</h2>
+            <p class="text-muted">Smart Water simplifies how Kenyans access clean water. Whether you need a single delivery or ongoing supply for your business, we connect you with vetted vendors who meet our quality standards.</p>
+            <ul class="list-unstyled">
+                <li class="mb-2">✅ Verified and licensed vendors only</li>
+                <li class="mb-2">✅ Real-time order tracking</li>
+                <li class="mb-2">✅ Competitive, transparent pricing</li>
+                <li class="mb-2">✅ Emergency supply available 24/7</li>
+            </ul>
+            <a href="services.html" class="btn btn-outline-primary">View All Services</a>
+        </div>
+        <div class="col-lg-6">
+            <div class="row g-3">
+                <div class="col-6">
+                    <div class="card text-center p-3">
+                        <div class="service-icon">🚛</div>
+                        <h6 class="fw-bold">Fast Delivery</h6>
+                        <small class="text-muted">Same-day in Nairobi</small>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body text-center p-4">
-                        <span class="service-icon">⚡</span>
-                        <h5>Fast Delivery</h5>
-                        <p class="text-muted">Same-day or next-day delivery available in Nairobi, Kiambu, and Nakuru regions.</p>
+                <div class="col-6">
+                    <div class="card text-center p-3">
+                        <div class="service-icon">💧</div>
+                        <h6 class="fw-bold">Clean Water</h6>
+                        <small class="text-muted">Quality tested</small>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body text-center p-4">
-                        <span class="service-icon">💰</span>
-                        <h5>Transparent Pricing</h5>
-                        <p class="text-muted">Compare vendor prices upfront — no hidden charges, no surprises on delivery.</p>
+                <div class="col-6">
+                    <div class="card text-center p-3">
+                        <div class="service-icon">📱</div>
+                        <h6 class="fw-bold">Easy Ordering</h6>
+                        <small class="text-muted">Order in minutes</small>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card text-center p-3">
+                        <div class="service-icon">🛡️</div>
+                        <h6 class="fw-bold">Trusted Platform</h6>
+                        <small class="text-muted">Since 2024</small>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
- 
-<!-- ===== SERVICES OVERVIEW ===== -->
+
+<!-- Services -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 text-center p-3">
+                    <div class="card-body">
+                        <div class="service-icon">🚰</div>
+                        <h5>Water Delivery</h5>
+                        <p class="text-muted">Reliable delivery of clean water to homes and businesses across Kenya. From 500L to 10,000L per trip.</p>
+                        <a href="services.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center p-3">
+                    <div class="card-body">
+                        <div class="service-icon">🔧</div>
+                        <h5>Tank Installation</h5>
+                        <p class="text-muted">Professional installation of water storage tanks from 1,000L to 50,000L capacity by certified technicians.</p>
+                        <a href="services.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center p-3">
+                    <div class="card-body">
+                        <div class="service-icon">🆘</div>
+                        <h5>Emergency Supply</h5>
+                        <p class="text-muted">Fast emergency water supply during shortages or rationing. We respond within 2 hours in Nairobi.</p>
+                        <a href="services.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
 <section class="container py-5">
-    <h2 class="section-title text-center">Our Services</h2>
-    <p class="section-subtitle text-center">Everything you need, all in one place.</p>
- 
+    <h2 class="text-center fw-bold mb-4">What Our Customers Say</h2>
     <div class="row g-4">
         <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body p-4">
-                    <span class="service-icon">🚛</span>
-                    <h5>Water Delivery</h5>
-                    <p class="text-muted">Reliable delivery of clean water to homes and businesses across the region.</p>
-                    <a href="services.html" class="btn btn-outline-primary btn-sm">Learn More</a>
-                </div>
+            <div class="card testimonial-card p-4">
+                <p class="quote">"Smart Water saved us during the NWSC rationing period. Their emergency supply arrived in under 3 hours!"</p>
+                <div class="author mt-3">— Grace M., Westlands</div>
+                <small class="text-muted">Residential Customer</small>
             </div>
         </div>
- 
         <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body p-4">
-                    <span class="service-icon">🏗️</span>
-                    <h5>Tank Installation</h5>
-                    <p class="text-muted">Professional installation of water storage tanks for residential and commercial use.</p>
-                    <a href="services.html" class="btn btn-outline-primary btn-sm">Learn More</a>
-                </div>
+            <div class="card testimonial-card p-4">
+                <p class="quote">"We use Smart Water for our restaurant monthly supply. Very reliable and the prices are the best in the market."</p>
+                <div class="author mt-3">— James K., Karen</div>
+                <small class="text-muted">Business Owner</small>
             </div>
         </div>
- 
         <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body p-4">
-                    <span class="service-icon">🆘</span>
-                    <h5>Emergency Supply</h5>
-                    <p class="text-muted">Fast emergency water supply during shortages — call us any time, day or night.</p>
-                    <a href="services.html" class="btn btn-outline-primary btn-sm">Learn More</a>
-                </div>
+            <div class="card testimonial-card p-4">
+                <p class="quote">"The tank installation team was professional and completed the job in one day. Highly recommended!"</p>
+                <div class="author mt-3">— Amina S., Kilimani</div>
+                <small class="text-muted">Homeowner</small>
             </div>
         </div>
     </div>
 </section>
- 
-<!-- ===== CALL TO ACTION ===== -->
+
+<!-- CTA -->
 <section class="bg-primary text-white text-center py-5">
     <div class="container">
-        <h2 class="fw-bold mb-3">Ready to Order Clean Water?</h2>
-        <p class="mb-4 opacity-75">Place an order in under 2 minutes. Choose your vendor, set your quantity, and we handle the rest.</p>
-        <a href="order.html" class="btn btn-light px-5 py-2 fw-semibold">Place an Order</a>
+        <h2 class="fw-bold">Ready to Order Clean Water?</h2>
+        <p class="mb-4">Join 500+ satisfied customers across Kenya. Order now and get same-day delivery in Nairobi.</p>
+        <a href="order.html" class="btn btn-warning btn-lg fw-bold me-2">Order Water Now</a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
     </div>
 </section>
- 
-<!-- ===== FOOTER ===== -->
-<footer class="bg-primary text-white text-center p-3">
-    <p>&copy; 2026 Smart Water | <a href="contact.html" class="text-white">Contact Us</a> | <a href="privacy.html" class="text-white">Privacy</a></p>
+
+<footer class="bg-primary text-white p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>💧 Smart Water</h5>
+                <p class="small">Kenya's most trusted water delivery platform, connecting customers with verified vendors since 2024.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Contact</h6>
+                <p class="small mb-1">📧 info@smartwater.co.ke</p>
+                <p class="small mb-1">📞 +254 798 345 756</p>
+                <p class="small">📍 Nairobi, Kenya</p>
+            </div>
+        </div>
+        <hr class="border-light">
+        <p class="text-center small mb-0">&copy; 2026 Smart Water. All rights reserved.</p>
+    </div>
 </footer>
- 
+
+<button id="backToTop" class="btn btn-primary" title="Back to top">↑</button>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
- 
