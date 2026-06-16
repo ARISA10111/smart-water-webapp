@@ -3,162 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About – Smart Water</title>
-
+    <title>About Us - Smart Water</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ===== NAVIGATION ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">💧 Smart Water</a>
-
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="vendors.html">Vendors</a></li>
                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="order.html">Order Water</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-warning text-dark px-3 ms-2 fw-bold" href="order.html">Order Water</a></li>
+                <li class="nav-item"><button id="darkToggle" title="Toggle dark mode">🌙</button></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
+    <h1>About Smart Water</h1>
+    <p>Connecting Kenya with clean water since 2024</p>
+</section>
+
+<div class="container py-5">
+
+    <!-- Mission & Vision -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="card h-100 p-4">
+                <h3 class="fw-bold text-primary">🎯 Our Mission</h3>
+                <p>To provide reliable, affordable, and timely water delivery services to homes and businesses across Kenya by leveraging technology to connect customers with trusted, vetted water vendors.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 p-4">
+                <h3 class="fw-bold text-primary">🌍 Our Vision</h3>
+                <p>To become Kenya's most trusted water delivery platform — making access to clean water as easy as ordering food, and ensuring no household or business goes without water.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Story -->
+    <div class="mb-5">
+        <h2 class="fw-bold mb-3">Our Story</h2>
+        <p>Smart Water was founded in 2024 in response to the growing water access challenges facing urban and peri-urban communities in Kenya. During the Nairobi water rationing crisis, our founder — a resident of Kilimani — spent three days without piped water and struggled to find a reliable, affordable water vendor. That frustration sparked an idea: a digital platform to make water delivery simple, transparent, and fast.</p>
+        <p>Today, Smart Water serves over 500 customers across Nairobi, Kiambu, Nakuru, Machakos, and Mombasa. We work with more than 20 licensed water vendors to ensure quality, competitive pricing, and reliable delivery — all bookable in minutes from your phone or computer.</p>
+    </div>
+
+    <!-- Objectives -->
+    <div class="mb-5">
+        <h2 class="fw-bold mb-3">Our Objectives</h2>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="card p-3 h-100">
+                    <h5>🤝 Connect</h5>
+                    <p class="text-muted small">Link customers directly with verified, licensed water vendors in their area.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 h-100">
+                    <h5>💧 Improve Access</h5>
+                    <p class="text-muted small">Make clean water accessible to every household and business, regardless of location.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 h-100">
+                    <h5>📦 Efficient Distribution</h5>
+                    <p class="text-muted small">Use technology to streamline water supply chains and reduce delivery time.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 h-100">
+                    <h5>💰 Fair Pricing</h5>
+                    <p class="text-muted small">Provide transparent, competitive pricing to protect customers from price gouging.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 h-100">
+                    <h5>🛡️ Quality Assurance</h5>
+                    <p class="text-muted small">Partner only with vendors who meet our water quality and service standards.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 h-100">
+                    <h5>🌱 Sustainability</h5>
+                    <p class="text-muted small">Promote responsible water use and support community water conservation efforts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team -->
+    <h2 class="fw-bold mb-4">Meet Our Team</h2>
+    <div class="row g-4">
+        <div class="col-md-3 col-sm-6 text-center">
+            <div class="card p-3">
+                <div style="font-size:3rem;">👩‍💼</div>
+                <h6 class="fw-bold mt-2">Aisha Kamau</h6>
+                <small class="text-muted">Founder & CEO</small>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+            <div class="card p-3">
+                <div style="font-size:3rem;">👨‍💻</div>
+                <h6 class="fw-bold mt-2">Brian Otieno</h6>
+                <small class="text-muted">Head of Technology</small>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+            <div class="card p-3">
+                <div style="font-size:3rem;">👩‍🔬</div>
+                <h6 class="fw-bold mt-2">Faith Njoroge</h6>
+                <small class="text-muted">Quality Assurance Lead</small>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+            <div class="card p-3">
+                <div style="font-size:3rem;">👨‍🚛</div>
+                <h6 class="fw-bold mt-2">Samuel Mwangi</h6>
+                <small class="text-muted">Logistics Manager</small>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="bg-primary text-white p-4">
     <div class="container">
-        <h1>About Smart Water</h1>
-        <p>Our story, mission, and the people behind the platform</p>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>💧 Smart Water</h5>
+                <p class="small">Kenya's most trusted water delivery platform.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Contact</h6>
+                <p class="small mb-1">📧 info@smartwater.co.ke</p>
+                <p class="small mb-1">📞 +254 798 345 756</p>
+                <p class="small">📍 Nairobi, Kenya</p>
+            </div>
+        </div>
+        <hr class="border-light">
+        <p class="text-center small mb-0">&copy; 2026 Smart Water. All rights reserved.</p>
     </div>
-</section>
-
-<!-- ===== MISSION & VISION ===== -->
-<section class="container py-5">
-    <div class="row g-4 align-items-stretch">
-
-        <div class="col-md-6">
-            <div class="card h-100">
-                <div class="card-body p-4">
-                    <span class="service-icon">🎯</span>
-                    <h4>Our Mission</h4>
-                    <p class="text-muted">
-                        To provide reliable, affordable, and timely water delivery services
-                        to homes and businesses across Kenya — removing the stress of water
-                        shortages by connecting customers with trusted local vendors through
-                        a simple digital platform.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card h-100">
-                <div class="card-body p-4">
-                    <span class="service-icon">🌍</span>
-                    <h4>Our Vision</h4>
-                    <p class="text-muted">
-                        To become Kenya's most trusted water delivery platform — expanding
-                        from Nairobi to every county in the country, ensuring that no home or
-                        business ever runs out of clean water.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ===== OBJECTIVES ===== -->
-<section class="bg-blue-light py-5">
-    <div class="container">
-        <h2 class="section-title text-center">Our Objectives</h2>
-        <p class="section-subtitle text-center">What we set out to achieve every day</p>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body p-4 text-center">
-                        <span class="service-icon">🤝</span>
-                        <h5>Connect Customers with Vendors</h5>
-                        <p class="text-muted">Build a transparent marketplace that links customers directly with verified, local water vendors.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body p-4 text-center">
-                        <span class="service-icon">💧</span>
-                        <h5>Improve Access to Clean Water</h5>
-                        <p class="text-muted">Reduce barriers to clean water access, especially in under-served urban and peri-urban areas of Kenya.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body p-4 text-center">
-                        <span class="service-icon">📦</span>
-                        <h5>Support Efficient Distribution</h5>
-                        <p class="text-muted">Help vendors manage deliveries efficiently through the platform, reducing waste and improving response times.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== OUR STORY ===== -->
-<section class="container py-5">
-    <div class="row align-items-center g-5">
-        <div class="col-md-6">
-            <h2 class="section-title">Our Story</h2>
-            <p>
-                Smart Water was founded in 2024 after our founders experienced first-hand
-                how difficult it was to find a reliable water vendor during a dry season
-                shortage in Nairobi. Phone calls went unanswered, prices were inconsistent,
-                and deliveries were unreliable.
-            </p>
-            <p>
-                We built Smart Water to solve that problem — a single platform where
-                customers can browse verified vendors, compare prices, and place orders
-                with confidence. Today we serve over 500 customers across Nairobi,
-                Kiambu, and Nakuru counties.
-            </p>
-            <a href="services.html" class="btn btn-primary">View Our Services</a>
-        </div>
-        <div class="col-md-6">
-            <div class="card bg-blue-light border-0">
-                <div class="card-body p-4">
-                    <h5 class="text-blue-dark fw-bold mb-3">By the Numbers</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2">📍 <strong>3 counties</strong> — Nairobi, Kiambu, Nakuru</li>
-                        <li class="mb-2">🏢 <strong>20+ vendors</strong> listed and verified</li>
-                        <li class="mb-2">👥 <strong>500+ customers</strong> served to date</li>
-                        <li class="mb-2">🕐 <strong>Same-day delivery</strong> available in Nairobi</li>
-                        <li>📞 <strong>24/7 emergency</strong> water supply line</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="bg-primary text-white text-center p-3">
-    <p>&copy; 2026 Smart Water | <a href="contact.html" class="text-white">Contact Us</a></p>
 </footer>
+
+<button id="backToTop" class="btn btn-primary" title="Back to top">↑</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
