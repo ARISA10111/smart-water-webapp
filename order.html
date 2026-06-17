@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Water – Smart Water</title>
-
+    <title>Order Water - Smart Water</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ===== NAVIGATION ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">💧 Smart Water</a>
-
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -31,120 +24,107 @@
                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Order Water</a></li>
+                <li class="nav-item"><a class="nav-link active btn btn-warning text-dark px-3 ms-2 fw-bold" href="order.html">Order Water</a></li>
+                <li class="nav-item"><button id="darkToggle" title="Toggle dark mode">🌙</button></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
-    <div class="container">
-        <h1>Order Water</h1>
-        <p>Fill in the form below and your vendor will be in touch shortly</p>
-    </div>
+    <h1>Order Water</h1>
+    <p>Fill in the form below and we'll arrange delivery</p>
 </section>
 
-<!-- ===== ORDER FORM ===== -->
-<section class="container py-5">
+<div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
 
-            <!-- Feedback alert (shown by JS) -->
-            <div id="order-feedback" class="alert" role="alert" style="display:none;"></div>
+            <div class="alert alert-info mb-4">
+                <strong>📦 Same-day delivery</strong> available for orders placed before 12:00 PM in Nairobi. See our <a href="pricing.html">pricing page</a> for rates.
+            </div>
 
-            <form id="orderForm" class="custom-form" novalidate>
-
-                <h5 class="fw-bold text-blue-dark mb-3">1. Your Details</h5>
-
-                <div class="row g-3 mb-3">
-                    <div class="col-md-6">
-                        <label for="orderName" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="orderName"
-                               placeholder="e.g. John Kamau" required>
-                        <div class="invalid-feedback">Please enter your full name.</div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="orderPhone" class="form-label fw-semibold">Phone Number <span class="text-danger">*</span></label>
-                        <input type="tel" class="form-control" id="orderPhone"
-                               placeholder="e.g. 0712 345 678" required>
-                        <div class="invalid-feedback">Enter a valid Kenyan phone number (07XX or 01XX).</div>
-                    </div>
-                </div>
-
-                <h5 class="fw-bold text-blue-dark mb-3 mt-4">2. Order Details</h5>
-
-                <div class="mb-3">
-                    <label for="orderVendor" class="form-label fw-semibold">Select Vendor <span class="text-danger">*</span></label>
-                    <select class="form-select" id="orderVendor" required>
-                        <option value="">Choose a vendor…</option>
-                        <option>Aqua Fresh – Nairobi (KES 500/1000L)</option>
-                        <option>Blue Springs – Kiambu (KES 550/1000L)</option>
-                        <option>Pure Water Ltd – Nakuru (KES 480/1000L)</option>
-                        <option>Crystal Clear Kenya – Nairobi (KES 520/1000L)</option>
-                        <option>Maji Safi Distributors – Kiambu (KES 490/1000L)</option>
-                    </select>
-                    <div class="invalid-feedback">Please select a vendor.</div>
-                </div>
+            <form class="custom-form" id="orderForm" novalidate>
 
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
-                        <label for="orderQuantity" class="form-label fw-semibold">Quantity (Litres) <span class="text-danger">*</span></label>
-                        <input type="number" class="form-control" id="orderQuantity"
-                               placeholder="e.g. 1000" min="500" step="500" required>
-                        <div class="form-text text-muted">Minimum order: 500 litres</div>
-                        <div class="invalid-feedback">Enter a quantity of at least 500 litres.</div>
+                        <label class="form-label" for="orderName">Full Name *</label>
+                        <input type="text" class="form-control" id="orderName" placeholder="e.g. John Kamau" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="orderDate" class="form-label fw-semibold">Preferred Delivery Date <span class="text-danger">*</span></label>
-                        <input type="date" class="form-control" id="orderDate" required>
-                        <div class="invalid-feedback">Please select a delivery date.</div>
+                        <label class="form-label" for="orderPhone">Phone Number *</label>
+                        <input type="tel" class="form-control" id="orderPhone" placeholder="+254712345678" required>
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="orderPayment" class="form-label fw-semibold">Payment Method <span class="text-danger">*</span></label>
-                    <select class="form-select" id="orderPayment" required>
-                        <option value="">Select payment method…</option>
-                        <option>M-Pesa</option>
-                        <option>Cash on Delivery</option>
-                        <option>Bank Transfer</option>
+                    <label class="form-label" for="orderVendor">Select Vendor *</label>
+                    <select class="form-select" id="orderVendor">
+                        <option value="">-- Choose a vendor --</option>
+                        <option>Aqua Fresh (Nairobi – KES 500/1000L)</option>
+                        <option>Blue Springs (Kiambu – KES 550/1000L)</option>
+                        <option>Pure Water Ltd (Nakuru – KES 480/1000L)</option>
+                        <option>Crystal Clear Waters (Nairobi – KES 520/1000L)</option>
                     </select>
-                    <div class="invalid-feedback">Please select a payment method.</div>
                 </div>
-
-                <h5 class="fw-bold text-blue-dark mb-3 mt-4">3. Delivery Address</h5>
 
                 <div class="mb-3">
-                    <label for="orderAddress" class="form-label fw-semibold">Street Address <span class="text-danger">*</span></label>
-                    <textarea class="form-control" id="orderAddress" rows="3"
-                              placeholder="e.g. House 14, Mwangi Road, Westlands, Nairobi" required></textarea>
-                    <div class="invalid-feedback">Please enter your delivery address.</div>
+                    <label class="form-label" for="orderQty">Quantity (Litres) *</label>
+                    <input type="number" class="form-control" id="orderQty" placeholder="e.g. 2000" min="100" max="10000" required>
+                    <div class="form-text">Minimum: 100L &nbsp;|&nbsp; Maximum: 10,000L per order</div>
                 </div>
 
-                <div class="mb-4">
-                    <label for="orderNotes" class="form-label fw-semibold">Special Instructions (optional)</label>
-                    <textarea class="form-control" id="orderNotes" rows="2"
-                              placeholder="e.g. Gate is green, call before delivery…"></textarea>
+                <div class="mb-3">
+                    <label class="form-label" for="orderDate">Preferred Delivery Date</label>
+                    <input type="date" class="form-control" id="orderDate">
                 </div>
 
-                <!-- Price estimate (shown by JS) -->
-                <div id="price-estimate" class="alert alert-info" style="display:none;"></div>
+                <div class="mb-3">
+                    <label class="form-label" for="orderAddress">Delivery Address *</label>
+                    <textarea rows="4" class="form-control" id="orderAddress" placeholder="e.g. House 5, Riverside Drive, Westlands, Nairobi" required></textarea>
+                </div>
 
-                <button type="submit" class="btn btn-primary px-5" id="orderSubmitBtn">
-                    Submit Order
-                </button>
+                <div class="mb-3">
+                    <label class="form-label" for="orderNotes">Additional Notes</label>
+                    <input type="text" class="form-control" id="orderNotes" placeholder="e.g. Gate code, landmark, special instructions">
+                </div>
 
+                <button class="btn btn-primary btn-lg w-100" type="submit">🚛 Submit Order</button>
             </form>
 
         </div>
     </div>
-</section>
+</div>
 
-<!-- ===== FOOTER ===== -->
-<footer class="bg-primary text-white text-center p-3">
-    <p>&copy; 2026 Smart Water | <a href="contact.html" class="text-white">Contact Us</a></p>
+<footer class="bg-primary text-white p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>💧 Smart Water</h5>
+                <p class="small">Kenya's most trusted water delivery platform.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Contact</h6>
+                <p class="small mb-1">📧 info@smartwater.co.ke</p>
+                <p class="small mb-1">📞 +254 798 345 756</p>
+                <p class="small">📍 Nairobi, Kenya</p>
+            </div>
+        </div>
+        <hr class="border-light">
+        <p class="text-center small mb-0">&copy; 2026 Smart Water. All rights reserved.</p>
+    </div>
 </footer>
+
+<button id="backToTop" class="btn btn-primary" title="Back to top">↑</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>

@@ -3,197 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services – Smart Water</title>
-
+    <title>Services - Smart Water</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ===== NAVIGATION ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">💧 Smart Water</a>
-
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="vendors.html">Vendors</a></li>
                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="order.html">Order Water</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-warning text-dark px-3 ms-2 fw-bold" href="order.html">Order Water</a></li>
+                <li class="nav-item"><button id="darkToggle" title="Toggle dark mode">🌙</button></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
-    <div class="container">
-        <h1>Our Services</h1>
-        <p>Everything you need — water delivered, stored, and secured</p>
-    </div>
+    <h1>Our Services</h1>
+    <p>Reliable Water Solutions for Every Need</p>
 </section>
 
-<!-- ===== MAIN SERVICES ===== -->
-<section class="container py-5">
-    <h2 class="section-title text-center">What We Offer</h2>
-    <p class="section-subtitle text-center">Tailored water solutions for every need</p>
+<div class="container py-5">
 
-    <div class="row g-4">
-
+    <div class="row g-4 mb-5">
         <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body p-4">
-                    <span class="service-icon">🚛</span>
+            <div class="card h-100 p-3">
+                <div class="text-center service-icon">🚛</div>
+                <div class="card-body">
                     <h4>Water Delivery</h4>
-                    <p class="text-muted">
-                        We deliver clean, safe water directly to your home or business.
-                        Choose from 1,000L, 5,000L, or 10,000L deliveries. Available
-                        same-day in Nairobi and next-day in Kiambu and Nakuru.
-                    </p>
-                    <ul class="text-muted ps-3">
-                        <li>Residential deliveries</li>
-                        <li>Commercial &amp; industrial bulk orders</li>
-                        <li>Scheduled recurring deliveries</li>
+                    <p>Reliable delivery of clean, tested water to homes and businesses across Kenya. We offer flexible quantities from 500L to 10,000L per trip, with same-day delivery available in Nairobi before noon.</p>
+                    <ul class="text-muted small">
+                        <li>Residential & commercial</li>
+                        <li>Same-day delivery in Nairobi</li>
+                        <li>SMS notification on dispatch</li>
+                        <li>Water quality certificate on request</li>
                     </ul>
-                    <a href="order.html" class="btn btn-primary btn-sm mt-2">Order Now</a>
+                    <a href="order.html" class="btn btn-primary btn-sm">Order Now</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body p-4">
-                    <span class="service-icon">🏗️</span>
+            <div class="card h-100 p-3">
+                <div class="text-center service-icon">🔧</div>
+                <div class="card-body">
                     <h4>Tank Installation</h4>
-                    <p class="text-muted">
-                        Our certified technicians install above-ground and underground
-                        water storage tanks. We supply tanks ranging from 500L to 50,000L
-                        and handle plumbing connections.
-                    </p>
-                    <ul class="text-muted ps-3">
-                        <li>Plastic &amp; steel tanks</li>
-                        <li>Rooftop &amp; underground options</li>
-                        <li>12-month installation warranty</li>
+                    <p>Professional supply and installation of water storage tanks by our certified technicians. We handle everything from site assessment to plumbing connections.</p>
+                    <ul class="text-muted small">
+                        <li>Tanks: 1,000L – 50,000L</li>
+                        <li>Plastic, steel, and concrete options</li>
+                        <li>Rooftop and underground installation</li>
+                        <li>1-year installation warranty</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary btn-sm mt-2">Get a Quote</a>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body p-4">
-                    <span class="service-icon">🆘</span>
+            <div class="card h-100 p-3">
+                <div class="text-center service-icon">🆘</div>
+                <div class="card-body">
                     <h4>Emergency Supply</h4>
-                    <p class="text-muted">
-                        When your water runs out unexpectedly, we respond fast. Our
-                        emergency line operates 24/7 and we guarantee a response within
-                        4 hours for Nairobi customers.
-                    </p>
-                    <ul class="text-muted ps-3">
-                        <li>24/7 emergency hotline</li>
-                        <li>4-hour response in Nairobi</li>
-                        <li>Priority dispatch for hospitals &amp; schools</li>
+                    <p>Water shortage? We respond to emergency requests within 2 hours in Nairobi. Available 24/7 including weekends and public holidays.</p>
+                    <ul class="text-muted small">
+                        <li>2-hour response in Nairobi</li>
+                        <li>Available 24/7, 365 days</li>
+                        <li>Priority dispatch guaranteed</li>
+                        <li>Emergency hotline: +254 700 911 000</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary btn-sm mt-2">Call Now</a>
+                    <a href="tel:+254700911000" class="btn btn-danger btn-sm">Call Emergency Line</a>
                 </div>
             </div>
         </div>
 
-    </div>
-</section>
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <div class="text-center service-icon">🧹</div>
+                <div class="card-body">
+                    <h4>Tank Cleaning</h4>
+                    <p>Regular tank cleaning and sanitization is essential for water safety. Our team uses WHO-approved methods to clean and disinfect your storage tanks.</p>
+                    <ul class="text-muted small">
+                        <li>Recommended every 6 months</li>
+                        <li>Chemical-free cleaning option</li>
+                        <li>Hygiene certificate provided</li>
+                        <li>All tank sizes and types</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Book Cleaning</a>
+                </div>
+            </div>
+        </div>
 
-<!-- ===== ADDITIONAL SERVICES ===== -->
-<section class="bg-blue-light py-5">
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <div class="text-center service-icon">⚙️</div>
+                <div class="card-body">
+                    <h4>Pump Installation</h4>
+                    <p>Ensure consistent water pressure throughout your building with a professional pump installation. We supply and install electric and solar-powered pumps.</p>
+                    <ul class="text-muted small">
+                        <li>Electric and solar options</li>
+                        <li>For homes and apartments</li>
+                        <li>Automated pressure systems</li>
+                        <li>6-month service warranty</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <div class="text-center service-icon">📋</div>
+                <div class="card-body">
+                    <h4>Corporate Water Plans</h4>
+                    <p>Tailored monthly water supply plans for schools, hospitals, hotels, construction sites, and large businesses. Enjoy priority service and discounted rates.</p>
+                    <ul class="text-muted small">
+                        <li>Monthly retainer contracts</li>
+                        <li>Dedicated account manager</li>
+                        <li>Priority delivery scheduling</li>
+                        <li>Volume discount pricing</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Get a Corporate Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How it works -->
+    <h2 class="fw-bold text-center mb-4">How It Works</h2>
+    <div class="row g-3 text-center">
+        <div class="col-md-3">
+            <div class="card p-4">
+                <div style="font-size:2rem;">1️⃣</div>
+                <h6 class="fw-bold mt-2">Place Your Order</h6>
+                <small class="text-muted">Fill in our simple online order form with your details and quantity needed.</small>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-4">
+                <div style="font-size:2rem;">2️⃣</div>
+                <h6 class="fw-bold mt-2">Vendor Assigned</h6>
+                <small class="text-muted">We match you with the nearest available verified vendor for your area.</small>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-4">
+                <div style="font-size:2rem;">3️⃣</div>
+                <h6 class="fw-bold mt-2">SMS Confirmation</h6>
+                <small class="text-muted">You receive an SMS with driver details and estimated arrival time.</small>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-4">
+                <div style="font-size:2rem;">4️⃣</div>
+                <h6 class="fw-bold mt-2">Water Delivered</h6>
+                <small class="text-muted">Clean water delivered to your door. Pay on delivery via M-Pesa or cash.</small>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="bg-primary text-white p-4">
     <div class="container">
-        <h2 class="section-title text-center">Additional Services</h2>
-        <p class="section-subtitle text-center">More ways we can help</p>
-
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card h-100">
-                    <div class="card-body p-4">
-                        <span class="service-icon">🔧</span>
-                        <h5>Tank Cleaning &amp; Maintenance</h5>
-                        <p class="text-muted">
-                            Regular tank cleaning prevents bacterial contamination.
-                            We offer quarterly and annual cleaning packages for all tank sizes.
-                        </p>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>💧 Smart Water</h5>
+                <p class="small">Kenya's most trusted water delivery platform.</p>
             </div>
-            <div class="col-md-6">
-                <div class="card h-100">
-                    <div class="card-body p-4">
-                        <span class="service-icon">🧪</span>
-                        <h5>Water Quality Testing</h5>
-                        <p class="text-muted">
-                            We partner with KEBS-certified labs to test water quality for
-                            homes, schools, and businesses. Get a full report within 48 hours.
-                        </p>
-                    </div>
-                </div>
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Contact</h6>
+                <p class="small mb-1">📧 info@smartwater.co.ke</p>
+                <p class="small mb-1">📞 +254 798 345 756</p>
+                <p class="small">📍 Nairobi, Kenya</p>
             </div>
         </div>
+        <hr class="border-light">
+        <p class="text-center small mb-0">&copy; 2026 Smart Water. All rights reserved.</p>
     </div>
-</section>
-
-<!-- ===== HOW IT WORKS ===== -->
-<section class="container py-5">
-    <h2 class="section-title text-center">How It Works</h2>
-    <p class="section-subtitle text-center">Order water in 3 simple steps</p>
-
-    <div class="row g-4 text-center">
-        <div class="col-md-4">
-            <div class="card border-0 bg-blue-light p-4 h-100">
-                <div class="card-body">
-                    <div class="stat-number mb-2" style="font-size:2.5rem;">1</div>
-                    <h5>Choose Your Vendor</h5>
-                    <p class="text-muted">Browse our list of verified vendors and compare prices, locations, and availability.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card border-0 bg-blue-light p-4 h-100">
-                <div class="card-body">
-                    <div class="stat-number mb-2" style="font-size:2.5rem;">2</div>
-                    <h5>Place Your Order</h5>
-                    <p class="text-muted">Fill in your delivery address, quantity, and preferred delivery time online.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card border-0 bg-blue-light p-4 h-100">
-                <div class="card-body">
-                    <div class="stat-number mb-2" style="font-size:2.5rem;">3</div>
-                    <h5>Receive Delivery</h5>
-                    <p class="text-muted">Your vendor delivers directly to your door. Pay on delivery or via M-Pesa.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="text-center mt-4">
-        <a href="order.html" class="btn btn-primary px-5">Place an Order</a>
-    </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="bg-primary text-white text-center p-3">
-    <p>&copy; 2026 Smart Water | <a href="contact.html" class="text-white">Contact Us</a></p>
 </footer>
+
+<button id="backToTop" class="btn btn-primary" title="Back to top">↑</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>

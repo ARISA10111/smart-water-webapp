@@ -3,154 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendors – Smart Water</title>
-
+    <title>Vendors - Smart Water</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ===== NAVIGATION ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">💧 Smart Water</a>
-
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="vendors.html">Vendors</a></li>
+                <li class="nav-item"><a class="nav-link active" href="vendors.html">Vendors</a></li>
                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="order.html">Order Water</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-warning text-dark px-3 ms-2 fw-bold" href="order.html">Order Water</a></li>
+                <li class="nav-item"><button id="darkToggle" title="Toggle dark mode">🌙</button></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
-    <div class="container">
-        <h1>Registered Vendors</h1>
-        <p>Browse verified water suppliers — compare prices and order directly</p>
-    </div>
+    <h1>Registered Vendors</h1>
+    <p>Verified water suppliers across Kenya</p>
 </section>
 
-<!-- ===== VENDOR TABLE ===== -->
-<section class="container py-5">
+<div class="container py-5">
 
-    <!-- Search / Filter bar -->
-    <div class="row mb-4">
-        <div class="col-md-6">
-            <input type="text" id="vendorSearch" class="form-control"
-                   placeholder="🔍 Search vendors by name or location…"
-                   aria-label="Search vendors">
-        </div>
-        <div class="col-md-3 mt-2 mt-md-0">
-            <select id="locationFilter" class="form-select" aria-label="Filter by location">
-                <option value="">All Locations</option>
-                <option value="Nairobi">Nairobi</option>
-                <option value="Kiambu">Kiambu</option>
-                <option value="Nakuru">Nakuru</option>
-            </select>
+    <p class="text-muted mb-4">All vendors on Smart Water are verified, licensed, and quality-checked. You can compare rates and locations below, then <a href="order.html">place your order</a>.</p>
+
+    <div class="card mb-5">
+        <div class="card-body">
+            <table class="table table-hover align-middle">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Vendor</th>
+                        <th>Location</th>
+                        <th>Coverage Area</th>
+                        <th>Price per 1,000L</th>
+                        <th>Rating</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Aqua Fresh</strong></td>
+                        <td>Nairobi CBD</td>
+                        <td>Nairobi, Kiambu</td>
+                        <td>KES 500</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td><a href="order.html" class="btn btn-sm btn-outline-primary">Order</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Blue Springs</strong></td>
+                        <td>Kiambu Town</td>
+                        <td>Kiambu, Ruiru, Thika</td>
+                        <td>KES 550</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td><a href="order.html" class="btn btn-sm btn-outline-primary">Order</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pure Water Ltd</strong></td>
+                        <td>Nakuru</td>
+                        <td>Nakuru, Naivasha</td>
+                        <td>KES 480</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td><a href="order.html" class="btn btn-sm btn-outline-primary">Order</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Crystal Clear Waters</strong></td>
+                        <td>Westlands, Nairobi</td>
+                        <td>Nairobi West, South</td>
+                        <td>KES 520</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td><a href="order.html" class="btn btn-sm btn-outline-primary">Order</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mombasa Pure</strong></td>
+                        <td>Mombasa Island</td>
+                        <td>Mombasa, Kilifi</td>
+                        <td>KES 600</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td><a href="order.html" class="btn btn-sm btn-outline-primary">Order</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-body p-0">
-            <div class="table-responsive">
-                <table class="table table-hover mb-0" id="vendorTable">
-                    <thead class="table-primary">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Vendor</th>
-                            <th scope="col">Location</th>
-                            <th scope="col">Price per 1,000L</th>
-                            <th scope="col">Availability</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><strong>Aqua Fresh</strong></td>
-                            <td>Nairobi</td>
-                            <td>KES 500</td>
-                            <td><span class="badge bg-success">Available</span></td>
-                            <td><a href="order.html" class="btn btn-primary btn-sm">Order</a></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><strong>Blue Springs</strong></td>
-                            <td>Kiambu</td>
-                            <td>KES 550</td>
-                            <td><span class="badge bg-success">Available</span></td>
-                            <td><a href="order.html" class="btn btn-primary btn-sm">Order</a></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td><strong>Pure Water Ltd</strong></td>
-                            <td>Nakuru</td>
-                            <td>KES 480</td>
-                            <td><span class="badge bg-success">Available</span></td>
-                            <td><a href="order.html" class="btn btn-primary btn-sm">Order</a></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td><strong>Crystal Clear Kenya</strong></td>
-                            <td>Nairobi</td>
-                            <td>KES 520</td>
-                            <td><span class="badge bg-warning text-dark">Limited</span></td>
-                            <td><a href="order.html" class="btn btn-primary btn-sm">Order</a></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td><strong>Maji Safi Distributors</strong></td>
-                            <td>Kiambu</td>
-                            <td>KES 490</td>
-                            <td><span class="badge bg-success">Available</span></td>
-                            <td><a href="order.html" class="btn btn-primary btn-sm">Order</a></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td><strong>Nairobi Water Works</strong></td>
-                            <td>Nairobi</td>
-                            <td>KES 510</td>
-                            <td><span class="badge bg-danger">Unavailable</span></td>
-                            <td><button class="btn btn-secondary btn-sm" disabled>Order</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+    <!-- Become a Vendor CTA -->
+    <div class="card bg-primary text-white p-4 text-center">
+        <h3 class="fw-bold">Are You a Water Vendor?</h3>
+        <p>Join the Smart Water platform and reach hundreds of customers in your area. We handle marketing, order management, and payment processing.</p>
+        <a href="contact.html" class="btn btn-warning fw-bold">Register as a Vendor</a>
+    </div>
+
+</div>
+
+<footer class="bg-primary text-white p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>💧 Smart Water</h5>
+                <p class="small">Kenya's most trusted water delivery platform.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Contact</h6>
+                <p class="small mb-1">📧 info@smartwater.co.ke</p>
+                <p class="small mb-1">📞 +254 798 345 756</p>
+                <p class="small">📍 Nairobi, Kenya</p>
             </div>
         </div>
+        <hr class="border-light">
+        <p class="text-center small mb-0">&copy; 2026 Smart Water. All rights reserved.</p>
     </div>
-
-    <p class="text-muted mt-3 small">* Prices are per 1,000 litres. Delivery charges may apply depending on distance. All vendors are KEBS-certified.</p>
-
-</section>
-
-<!-- ===== VENDOR CTA ===== -->
-<section class="bg-blue-light py-5 text-center">
-    <div class="container">
-        <h3 class="fw-bold">Are You a Water Vendor?</h3>
-        <p class="text-muted mb-3">Join the Smart Water platform and reach hundreds of customers across your county.</p>
-        <a href="contact.html" class="btn btn-primary px-5">Register as a Vendor</a>
-    </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="bg-primary text-white text-center p-3">
-    <p>&copy; 2026 Smart Water | <a href="contact.html" class="text-white">Contact Us</a></p>
 </footer>
+
+<button id="backToTop" class="btn btn-primary" title="Back to top">↑</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>

@@ -3,225 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery – Smart Water</title>
-
+    <title>Gallery - Smart Water</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        /* Lightbox overlay */
-        #lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.85);
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        #lightbox.active { display: flex; }
-        #lightbox img {
-            max-width: 90vw;
-            max-height: 80vh;
-            border-radius: 0.5rem;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
-        }
-        #lightbox-caption {
-            color: #fff;
-            margin-top: 1rem;
-            font-size: 1rem;
-            opacity: 0.85;
-        }
-        #lightbox-close {
-            position: absolute;
-            top: 1.2rem;
-            right: 1.5rem;
-            color: #fff;
-            font-size: 2rem;
-            cursor: pointer;
-            line-height: 1;
-            background: none;
-            border: none;
-        }
-    </style>
 </head>
 <body>
 
-<!-- ===== NAVIGATION ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">💧 Smart Water</a>
-
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="vendors.html">Vendors</a></li>
                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="order.html">Order Water</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-warning text-dark px-3 ms-2 fw-bold" href="order.html">Order Water</a></li>
+                <li class="nav-item"><button id="darkToggle" title="Toggle dark mode">🌙</button></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
-    <div class="container">
-        <h1>Our Gallery</h1>
-        <p>A look at our fleet, tank installations, and operations</p>
-    </div>
+    <h1>Photo Gallery</h1>
+    <p>See Smart Water in action across Kenya</p>
 </section>
 
-<!-- ===== FILTER BUTTONS ===== -->
-<section class="container pt-5">
-    <div class="text-center mb-4" id="gallery-filters">
-        <button class="btn btn-primary me-2 mb-2 filter-btn active" data-filter="all">All</button>
-        <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="delivery">Delivery</button>
-        <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="installation">Installation</button>
-        <button class="btn btn-outline-primary mb-2 filter-btn" data-filter="team">Our Team</button>
+<div class="container py-5">
+
+    <!-- Filter Buttons -->
+    <div class="gallery-filter text-center mb-4">
+        <button class="btn btn-primary" data-filter="all">All</button>
+        <button class="btn btn-outline-primary" data-filter="delivery">Deliveries</button>
+        <button class="btn btn-outline-primary" data-filter="tank">Tank Installation</button>
+        <button class="btn btn-outline-primary" data-filter="team">Our Team</button>
     </div>
-</section>
 
-<!-- ===== GALLERY GRID ===== -->
-<section class="container pb-5">
-    <div class="row g-3" id="gallery-grid">
+    <div class="row g-4" id="galleryGrid">
 
-        <!-- Delivery images -->
-        <div class="col-sm-6 col-md-4 gallery-item" data-category="delivery">
-            <div class="card border-0">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
-                     class="gallery-img"
-                     alt="Water delivery truck in Nairobi"
-                     data-caption="Water delivery truck — Nairobi CBD">
-                <div class="card-body p-2 text-center">
-                    <small class="text-muted">Water Delivery Truck</small>
+        <!-- Delivery Photos - using placeholder service with water-themed colors -->
+        <div class="col-md-4 col-sm-6 gallery-item" data-category="delivery">
+            <div class="card overflow-hidden">
+                <img src="https://placehold.co/600x400/0d6efd/white?text=Water+Delivery+Truck" alt="Water delivery truck on its way to a customer in Nairobi" class="gallery-img">
+                <div class="card-body p-2">
+                    <small class="text-muted">Water Delivery – Nairobi CBD</small>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 gallery-item" data-category="delivery">
-            <div class="card border-0">
-                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80"
-                     class="gallery-img"
-                     alt="Clean water in containers"
-                     data-caption="Clean, tested water ready for delivery">
-                <div class="card-body p-2 text-center">
-                    <small class="text-muted">Clean Water Ready for Delivery</small>
+        <div class="col-md-4 col-sm-6 gallery-item" data-category="delivery">
+            <div class="card overflow-hidden">
+                <img src="https://placehold.co/600x400/17a2b8/white?text=Home+Delivery" alt="Water being delivered to a residential home in Westlands" class="gallery-img">
+                <div class="card-body p-2">
+                    <small class="text-muted">Home Delivery – Westlands</small>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 gallery-item" data-category="delivery">
-            <div class="card border-0">
-                <img src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=600&q=80"
-                     class="gallery-img"
-                     alt="Water delivery to a residence"
-                     data-caption="Residential delivery — Westlands, Nairobi">
-                <div class="card-body p-2 text-center">
-                    <small class="text-muted">Residential Delivery</small>
+        <div class="col-md-4 col-sm-6 gallery-item" data-category="delivery">
+            <div class="card overflow-hidden">
+                <img src="https://placehold.co/600x400/0b5ed7/white?text=Business+Supply" alt="Large volume water supply to a commercial business" class="gallery-img">
+                <div class="card-body p-2">
+                    <small class="text-muted">Business Supply – Industrial Area</small>
                 </div>
             </div>
         </div>
 
-        <!-- Installation images -->
-        <div class="col-sm-6 col-md-4 gallery-item" data-category="installation">
-            <div class="card border-0">
-                <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=600&q=80"
-                     class="gallery-img"
-                     alt="Water tank installation"
-                     data-caption="5,000L tank installation — Karen, Nairobi">
-                <div class="card-body p-2 text-center">
-                    <small class="text-muted">Tank Installation</small>
+        <!-- Tank Installation -->
+        <div class="col-md-4 col-sm-6 gallery-item" data-category="tank">
+            <div class="card overflow-hidden">
+                <img src="https://placehold.co/600x400/28a745/white?text=Tank+Installation" alt="Technicians installing a 5000L water storage tank" class="gallery-img">
+                <div class="card-body p-2">
+                    <small class="text-muted">Tank Installation – Kilimani</small>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 gallery-item" data-category="installation">
-            <div class="card border-0">
-                <img src="https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?w=600&q=80"
-                     class="gallery-img"
-                     alt="Underground tank installation"
-                     data-caption="Underground tank installation — commercial site">
-                <div class="card-body p-2 text-center">
-                    <small class="text-muted">Underground Tank Installation</small>
+        <div class="col-md-4 col-sm-6 gallery-item" data-category="tank">
+            <div class="card overflow-hidden">
+                <img src="https://placehold.co/600x400/20c997/white?text=Rooftop+Tank" alt="Rooftop water tank installation completed" class="gallery-img">
+                <div class="card-body p-2">
+                    <small class="text-muted">Rooftop Tank – Karen</small>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 gallery-item" data-category="installation">
-            <div class="card border-0">
-                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600&q=80"
-                     class="gallery-img"
-                     alt="Rooftop tank setup"
-                     data-caption="Rooftop water tank — apartment block, Kiambu">
-                <div class="card-body p-2 text-center">
-                    <small class="text-muted">Rooftop Tank Setup</small>
+        <div class="col-md-4 col-sm-6 gallery-item" data-category="tank">
+            <div class="card overflow-hidden">
+                <img src="https://placehold.co/600x400/198754/white?text=Underground+Tank" alt="Underground water tank being installed" class="gallery-img">
+                <div class="card-body p-2">
+                    <small class="text-muted">Underground Tank – Runda</small>
                 </div>
             </div>
         </div>
 
-        <!-- Team images -->
-        <div class="col-sm-6 col-md-4 gallery-item" data-category="team">
-            <div class="card border-0">
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80"
-                     class="gallery-img"
-                     alt="Smart Water team"
-                     data-caption="Our operations team — Nairobi HQ">
-                <div class="card-body p-2 text-center">
-                    <small class="text-muted">Our Operations Team</small>
+        <!-- Team -->
+        <div class="col-md-4 col-sm-6 gallery-item" data-category="team">
+            <div class="card overflow-hidden">
+                <img src="https://placehold.co/600x400/6f42c1/white?text=Smart+Water+Team" alt="Smart Water customer service team at the Nairobi office" class="gallery-img">
+                <div class="card-body p-2">
+                    <small class="text-muted">Customer Service Team – HQ</small>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 gallery-item" data-category="team">
-            <div class="card border-0">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80"
-                     class="gallery-img"
-                     alt="Customer service team"
-                     data-caption="Customer service team — ready to help">
-                <div class="card-body p-2 text-center">
-                    <small class="text-muted">Customer Service Team</small>
+        <div class="col-md-4 col-sm-6 gallery-item" data-category="team">
+            <div class="card overflow-hidden">
+                <img src="https://placehold.co/600x400/e83e8c/white?text=Field+Officers" alt="Field officers conducting water quality checks" class="gallery-img">
+                <div class="card-body p-2">
+                    <small class="text-muted">Quality Check Team – Field</small>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 gallery-item" data-category="delivery">
-            <div class="card border-0">
-                <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80"
-                     class="gallery-img"
-                     alt="Water quality testing"
-                     data-caption="Water quality testing at our certified lab">
-                <div class="card-body p-2 text-center">
-                    <small class="text-muted">Water Quality Testing</small>
+        <div class="col-md-4 col-sm-6 gallery-item" data-category="team">
+            <div class="card overflow-hidden">
+                <img src="https://placehold.co/600x400/fd7e14/white?text=Driver+Team" alt="Smart Water drivers ready for morning deliveries" class="gallery-img">
+                <div class="card-body p-2">
+                    <small class="text-muted">Driver Team – Morning Briefing</small>
                 </div>
             </div>
         </div>
 
     </div>
-</section>
-
-<!-- ===== LIGHTBOX ===== -->
-<div id="lightbox" role="dialog" aria-label="Image viewer">
-    <button id="lightbox-close" aria-label="Close lightbox">&times;</button>
-    <img id="lightbox-img" src="" alt="">
-    <p id="lightbox-caption"></p>
 </div>
 
-<!-- ===== FOOTER ===== -->
-<footer class="bg-primary text-white text-center p-3">
-    <p>&copy; 2026 Smart Water | <a href="contact.html" class="text-white">Contact Us</a></p>
+<footer class="bg-primary text-white p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>💧 Smart Water</h5>
+                <p class="small">Kenya's most trusted water delivery platform.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Contact</h6>
+                <p class="small mb-1">📧 info@smartwater.co.ke</p>
+                <p class="small mb-1">📞 +254 798 345 756</p>
+                <p class="small">📍 Nairobi, Kenya</p>
+            </div>
+        </div>
+        <hr class="border-light">
+        <p class="text-center small mb-0">&copy; 2026 Smart Water. All rights reserved.</p>
+    </div>
 </footer>
+
+<button id="backToTop" class="btn btn-primary" title="Back to top">↑</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>

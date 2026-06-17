@@ -3,231 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing – Smart Water</title>
-
+    <title>Pricing - Smart Water</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ===== NAVIGATION ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">💧 Smart Water</a>
-
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="vendors.html">Vendors</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="order.html">Order Water</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-warning text-dark px-3 ms-2 fw-bold" href="order.html">Order Water</a></li>
+                <li class="nav-item"><button id="darkToggle" title="Toggle dark mode">🌙</button></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
+    <h1>Pricing Plans</h1>
+    <p>Transparent, affordable rates for every need</p>
+</section>
+
+<div class="container py-5">
+
+    <!-- Delivery Pricing -->
+    <h2 class="text-center fw-bold mb-2">Water Delivery Rates</h2>
+    <p class="text-center text-muted mb-4">All prices include delivery within Nairobi. County-specific rates may vary.</p>
+
+    <div class="row g-4 mb-5 justify-content-center">
+
+        <div class="col-md-4">
+            <div class="card pricing-card h-100">
+                <div class="card-header bg-light text-center py-3">
+                    <h5 class="mb-0 fw-bold">Basic</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="price">KES 350</div>
+                    <div class="period">per 1,000 litres</div>
+                    <hr>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li class="mb-2">✅ Minimum order: 1,000L</li>
+                        <li class="mb-2">✅ Standard delivery (24 hrs)</li>
+                        <li class="mb-2">✅ Email confirmation</li>
+                        <li class="mb-2 text-muted">❌ Priority scheduling</li>
+                        <li class="mb-2 text-muted">❌ Dedicated driver</li>
+                    </ul>
+                    <a href="order.html" class="btn btn-outline-primary mt-3 w-100">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card pricing-card featured h-100">
+                <div class="card-header text-center py-3">
+                    <h5 class="mb-0 fw-bold">Standard ⭐ Popular</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="price">KES 480</div>
+                    <div class="period">per 1,000 litres</div>
+                    <hr>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li class="mb-2">✅ Minimum order: 2,000L</li>
+                        <li class="mb-2">✅ Same-day delivery</li>
+                        <li class="mb-2">✅ SMS + Email updates</li>
+                        <li class="mb-2">✅ Priority scheduling</li>
+                        <li class="mb-2 text-muted">❌ Dedicated driver</li>
+                    </ul>
+                    <a href="order.html" class="btn btn-primary mt-3 w-100">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card pricing-card h-100">
+                <div class="card-header bg-light text-center py-3">
+                    <h5 class="mb-0 fw-bold">Business</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="price">KES 600</div>
+                    <div class="period">per 1,000 litres</div>
+                    <hr>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li class="mb-2">✅ Minimum order: 5,000L</li>
+                        <li class="mb-2">✅ Scheduled deliveries</li>
+                        <li class="mb-2">✅ SMS + Email + Call</li>
+                        <li class="mb-2">✅ Priority scheduling</li>
+                        <li class="mb-2">✅ Dedicated driver</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline-primary mt-3 w-100">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Additional Services -->
+    <h2 class="text-center fw-bold mb-4">Additional Services</h2>
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-hover align-middle">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Price (KES)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tank Installation (1,000L)</td>
+                        <td>Supply and installation of 1,000L plastic tank</td>
+                        <td>8,500</td>
+                    </tr>
+                    <tr>
+                        <td>Tank Installation (5,000L)</td>
+                        <td>Supply and installation of 5,000L plastic tank</td>
+                        <td>22,000</td>
+                    </tr>
+                    <tr>
+                        <td>Emergency Delivery</td>
+                        <td>Priority delivery within 2 hours (Nairobi only)</td>
+                        <td>+500 surcharge</td>
+                    </tr>
+                    <tr>
+                        <td>Tank Cleaning</td>
+                        <td>Professional tank cleaning and sanitization</td>
+                        <td>2,500</td>
+                    </tr>
+                    <tr>
+                        <td>Pump Installation</td>
+                        <td>Electric pump for tank to building supply</td>
+                        <td>15,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="alert alert-info mt-4">
+        <strong>💡 Note:</strong> All prices are inclusive of VAT. County delivery charges may apply outside Nairobi. Contact us for custom business quotes.
+    </div>
+
+</div>
+
+<footer class="bg-primary text-white p-4">
     <div class="container">
-        <h1>Pricing Plans</h1>
-        <p>Simple, transparent pricing — no hidden charges</p>
-    </div>
-</section>
-
-<!-- ===== PRICING CARDS ===== -->
-<section class="container py-5">
-    <h2 class="section-title text-center">Choose a Plan</h2>
-    <p class="section-subtitle text-center">All plans include free order tracking and customer support.</p>
-
-    <div class="row g-4 justify-content-center">
-
-        <!-- Basic -->
-        <div class="col-md-4">
-            <div class="pricing-card">
-                <h4 class="fw-bold text-muted mb-1">Basic</h4>
-                <p class="text-muted small mb-3">For occasional household use</p>
-                <div class="price">KES 500 <span>/ 1,000L</span></div>
-                <hr>
-                <ul class="list-unstyled text-muted text-start mb-4">
-                    <li class="mb-2">✅ Minimum order: 1,000L</li>
-                    <li class="mb-2">✅ Next-day delivery</li>
-                    <li class="mb-2">✅ Cash or M-Pesa payment</li>
-                    <li class="mb-2">✅ Customer support (Mon–Fri)</li>
-                    <li class="text-danger mb-2">❌ No priority dispatch</li>
-                    <li class="text-danger">❌ No scheduling</li>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>💧 Smart Water</h5>
+                <p class="small">Kenya's most trusted water delivery platform.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
                 </ul>
-                <a href="order.html" class="btn btn-outline-primary w-100">Get Started</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Contact</h6>
+                <p class="small mb-1">📧 info@smartwater.co.ke</p>
+                <p class="small mb-1">📞 +254 798 345 756</p>
+                <p class="small">📍 Nairobi, Kenya</p>
             </div>
         </div>
-
-        <!-- Standard (popular) -->
-        <div class="col-md-4">
-            <div class="pricing-card popular">
-                <span class="pricing-badge d-inline-block mb-2">Most Popular</span>
-                <h4 class="fw-bold text-blue-dark mb-1">Standard</h4>
-                <p class="text-muted small mb-3">For regular home &amp; small business use</p>
-                <div class="price">KES 450 <span>/ 1,000L</span></div>
-                <hr>
-                <ul class="list-unstyled text-muted text-start mb-4">
-                    <li class="mb-2">✅ Minimum order: 3,000L</li>
-                    <li class="mb-2">✅ Same-day delivery (Nairobi)</li>
-                    <li class="mb-2">✅ M-Pesa, cash, or bank</li>
-                    <li class="mb-2">✅ Priority dispatch</li>
-                    <li class="mb-2">✅ Scheduled recurring orders</li>
-                    <li class="text-danger">❌ No dedicated account manager</li>
-                </ul>
-                <a href="order.html" class="btn btn-primary w-100">Get Started</a>
-            </div>
-        </div>
-
-        <!-- Business -->
-        <div class="col-md-4">
-            <div class="pricing-card">
-                <h4 class="fw-bold text-muted mb-1">Business</h4>
-                <p class="text-muted small mb-3">For large-scale commercial operations</p>
-                <div class="price">KES 400 <span>/ 1,000L</span></div>
-                <hr>
-                <ul class="list-unstyled text-muted text-start mb-4">
-                    <li class="mb-2">✅ Minimum order: 10,000L</li>
-                    <li class="mb-2">✅ Same-day delivery (all areas)</li>
-                    <li class="mb-2">✅ All payment methods</li>
-                    <li class="mb-2">✅ Priority &amp; emergency dispatch</li>
-                    <li class="mb-2">✅ Dedicated account manager</li>
-                    <li class="mb-2">✅ Monthly invoicing available</li>
-                </ul>
-                <a href="contact.html" class="btn btn-outline-primary w-100">Contact Us</a>
-            </div>
-        </div>
-
+        <hr class="border-light">
+        <p class="text-center small mb-0">&copy; 2026 Smart Water. All rights reserved.</p>
     </div>
-</section>
-
-<!-- ===== PRICING TABLE ===== -->
-<section class="bg-blue-light py-5">
-    <div class="container">
-        <h2 class="section-title text-center">Additional Services Pricing</h2>
-        <p class="section-subtitle text-center">Other services billed separately</p>
-
-        <div class="card">
-            <div class="card-body p-0">
-                <div class="table-responsive">
-                    <table class="table table-hover mb-0">
-                        <thead class="table-primary">
-                            <tr>
-                                <th scope="col">Service</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Notes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Tank Installation (500L – 2,000L)</td>
-                                <td>KES 8,000 – 15,000</td>
-                                <td>Includes labour and fittings</td>
-                            </tr>
-                            <tr>
-                                <td>Tank Installation (5,000L+)</td>
-                                <td>KES 25,000+</td>
-                                <td>Custom quote required</td>
-                            </tr>
-                            <tr>
-                                <td>Tank Cleaning</td>
-                                <td>KES 1,500</td>
-                                <td>Per cleaning session</td>
-                            </tr>
-                            <tr>
-                                <td>Water Quality Test</td>
-                                <td>KES 2,500</td>
-                                <td>KEBS-certified lab report</td>
-                            </tr>
-                            <tr>
-                                <td>Emergency Delivery (after hours)</td>
-                                <td>+KES 500 surcharge</td>
-                                <td>Applied to any plan</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ===== FAQ ===== -->
-<section class="container py-5">
-    <h2 class="section-title text-center">Frequently Asked Questions</h2>
-    <p class="section-subtitle text-center">Answers to common questions about our pricing</p>
-
-    <div class="accordion" id="pricingFAQ">
-
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faq1">
-                <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faqAnswer1"
-                        aria-expanded="false">
-                    Are delivery charges included in the price?
-                </button>
-            </h2>
-            <div id="faqAnswer1" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
-                <div class="accordion-body text-muted">
-                    Delivery within Nairobi County is free for orders of 3,000L and above.
-                    For smaller orders or deliveries outside Nairobi, a delivery charge of
-                    KES 200–500 applies depending on distance.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faq2">
-                <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faqAnswer2"
-                        aria-expanded="false">
-                    Can I switch plans after ordering?
-                </button>
-            </h2>
-            <div id="faqAnswer2" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
-                <div class="accordion-body text-muted">
-                    Yes. Plans are per-order, not subscriptions. You can choose a different
-                    plan on your next order at any time.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="faq3">
-                <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faqAnswer3"
-                        aria-expanded="false">
-                    Do you offer discounts for schools or NGOs?
-                </button>
-            </h2>
-            <div id="faqAnswer3" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
-                <div class="accordion-body text-muted">
-                    Yes. We offer a 10% discount on all orders for registered schools, hospitals,
-                    and NGOs. Contact us with your registration documents to set this up.
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="bg-primary text-white text-center p-3">
-    <p>&copy; 2026 Smart Water | <a href="contact.html" class="text-white">Contact Us</a></p>
 </footer>
+
+<button id="backToTop" class="btn btn-primary" title="Back to top">↑</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
