@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendors - Smart Water</title>
+    <title>Vendors – Smart Water</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ===== NAVIGATION ===== -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Smart Water</a>
+        <a class="navbar-brand" href="index.html">💧 Smart Water</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -22,62 +26,133 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link active" href="vendors.html">Vendors</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="vendors.html">Vendors</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 <li class="nav-item"><a class="nav-link" href="order.html">Order Water</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
+<!-- ===== PAGE HEADER ===== -->
 <section class="page-header">
-    <h1>Registered Vendors</h1>
+    <div class="container">
+        <h1>Registered Vendors</h1>
+        <p>Browse verified water suppliers — compare prices and order directly</p>
+    </div>
 </section>
 
-<div class="container py-5">
+<!-- ===== VENDOR TABLE ===== -->
+<section class="container py-5">
 
-    <div class="card">
-        <div class="card-body">
-
-            <table class="table table-hover">
-                <thead class="table-primary">
-                    <tr>
-                        <th>Vendor</th>
-                        <th>Location</th>
-                        <th>Price per 1000L</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Aqua Fresh</td>
-                        <td>Nairobi</td>
-                        <td>KES 500</td>
-                    </tr>
-
-                    <tr>
-                        <td>Blue Springs</td>
-                        <td>Kiambu</td>
-                        <td>KES 550</td>
-                    </tr>
-
-                    <tr>
-                        <td>Pure Water Ltd</td>
-                        <td>Nakuru</td>
-                        <td>KES 480</td>
-                    </tr>
-                </tbody>
-            </table>
-
+    <!-- Search / Filter bar -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <input type="text" id="vendorSearch" class="form-control"
+                   placeholder="🔍 Search vendors by name or location…"
+                   aria-label="Search vendors">
+        </div>
+        <div class="col-md-3 mt-2 mt-md-0">
+            <select id="locationFilter" class="form-select" aria-label="Filter by location">
+                <option value="">All Locations</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Kiambu">Kiambu</option>
+                <option value="Nakuru">Nakuru</option>
+            </select>
         </div>
     </div>
 
-</div>
+    <div class="card">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0" id="vendorTable">
+                    <thead class="table-primary">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Vendor</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Price per 1,000L</th>
+                            <th scope="col">Availability</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Aqua Fresh</strong></td>
+                            <td>Nairobi</td>
+                            <td>KES 500</td>
+                            <td><span class="badge bg-success">Available</span></td>
+                            <td><a href="order.html" class="btn btn-primary btn-sm">Order</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Blue Springs</strong></td>
+                            <td>Kiambu</td>
+                            <td>KES 550</td>
+                            <td><span class="badge bg-success">Available</span></td>
+                            <td><a href="order.html" class="btn btn-primary btn-sm">Order</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Pure Water Ltd</strong></td>
+                            <td>Nakuru</td>
+                            <td>KES 480</td>
+                            <td><span class="badge bg-success">Available</span></td>
+                            <td><a href="order.html" class="btn btn-primary btn-sm">Order</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>Crystal Clear Kenya</strong></td>
+                            <td>Nairobi</td>
+                            <td>KES 520</td>
+                            <td><span class="badge bg-warning text-dark">Limited</span></td>
+                            <td><a href="order.html" class="btn btn-primary btn-sm">Order</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>Maji Safi Distributors</strong></td>
+                            <td>Kiambu</td>
+                            <td>KES 490</td>
+                            <td><span class="badge bg-success">Available</span></td>
+                            <td><a href="order.html" class="btn btn-primary btn-sm">Order</a></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><strong>Nairobi Water Works</strong></td>
+                            <td>Nairobi</td>
+                            <td>KES 510</td>
+                            <td><span class="badge bg-danger">Unavailable</span></td>
+                            <td><button class="btn btn-secondary btn-sm" disabled>Order</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
+    <p class="text-muted mt-3 small">* Prices are per 1,000 litres. Delivery charges may apply depending on distance. All vendors are KEBS-certified.</p>
+
+</section>
+
+<!-- ===== VENDOR CTA ===== -->
+<section class="bg-blue-light py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold">Are You a Water Vendor?</h3>
+        <p class="text-muted mb-3">Join the Smart Water platform and reach hundreds of customers across your county.</p>
+        <a href="contact.html" class="btn btn-primary px-5">Register as a Vendor</a>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer class="bg-primary text-white text-center p-3">
-    <p>&copy; 2026 Smart Water</p>
+    <p>&copy; 2026 Smart Water | <a href="contact.html" class="text-white">Contact Us</a></p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
